@@ -4,6 +4,7 @@ import SnapKit
 var router: Router!
 
 var common: Common = Common.shared
+var gitService: GitService = GitService.shared
 
 var viewWidth: CGFloat!
 var viewHeight: CGFloat!

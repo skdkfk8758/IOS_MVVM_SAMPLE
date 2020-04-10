@@ -45,4 +45,12 @@ final class Router {
         
         self.navigationController?.pushViewController(viewController, animated: false)
     }
+    
+    // 깃검색화면으로 이동
+    public func navigateToSearchGit() {
+        let viewModel = GitSearchViewModel()
+        let viewController = GitSearchViewController(viewModel: viewModel)
+        
+        self.navigationController?.pushViewController(viewController, animated: false)
+    }
 }

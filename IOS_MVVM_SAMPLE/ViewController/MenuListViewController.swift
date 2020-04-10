@@ -50,6 +50,7 @@ extension MenuListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0: router.navigateToCounter(); break
+        case 1: router.navigateToSearchGit(); break
         default: break
         }
     }

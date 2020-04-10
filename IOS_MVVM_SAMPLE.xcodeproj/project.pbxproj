@@ -21,6 +21,12 @@
 		E970DDDA243FFA6800DB6B39 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDD9243FFA6800DB6B39 /* Resource.swift */; };
 		E970DDDC243FFB0000DB6B39 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDDB243FFB0000DB6B39 /* CounterViewController.swift */; };
 		E970DDDE243FFD9400DB6B39 /* CouterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDDD243FFD9400DB6B39 /* CouterViewModel.swift */; };
+		E970DDE1244008DE00DB6B39 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDE0244008DE00DB6B39 /* APIProvider.swift */; };
+		E970DDE42440092800DB6B39 /* GitRepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDE32440092800DB6B39 /* GitRepoModel.swift */; };
+		E970DDE62440099400DB6B39 /* GitSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDE52440099400DB6B39 /* GitSearchViewController.swift */; };
+		E970DDE8244009A900DB6B39 /* GitSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDE7244009A900DB6B39 /* GitSearchViewModel.swift */; };
+		E970DDEA24400A0F00DB6B39 /* GitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDE924400A0F00DB6B39 /* GitService.swift */; };
+		E970DDEC24400AC500DB6B39 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970DDEB24400AC500DB6B39 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +61,12 @@
 		E970DDD9243FFA6800DB6B39 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		E970DDDB243FFB0000DB6B39 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		E970DDDD243FFD9400DB6B39 /* CouterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouterViewModel.swift; sourceTree = "<group>"; };
+		E970DDE0244008DE00DB6B39 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		E970DDE32440092800DB6B39 /* GitRepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepoModel.swift; sourceTree = "<group>"; };
+		E970DDE52440099400DB6B39 /* GitSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSearchViewController.swift; sourceTree = "<group>"; };
+		E970DDE7244009A900DB6B39 /* GitSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitSearchViewModel.swift; sourceTree = "<group>"; };
+		E970DDE924400A0F00DB6B39 /* GitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitService.swift; sourceTree = "<group>"; };
+		E970DDEB24400AC500DB6B39 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,8 @@
 		E970DDAE243FF11D00DB6B39 /* IOS_MVVM_SAMPLE */ = {
 			isa = PBXGroup;
 			children = (
+				E970DDE22440091E00DB6B39 /* Model */,
+				E970DDDF244008D500DB6B39 /* Service */,
 				E970DDCF243FF3F100DB6B39 /* Helper */,
 				E970DDCA243FF36600DB6B39 /* Protocal */,
 				E970DDC5243FF2FE00DB6B39 /* Router */,
@@ -127,6 +141,7 @@
 				E970DDD5243FF77000DB6B39 /* LoginViewController.swift */,
 				E970DDD7243FFA0000DB6B39 /* MenuListViewController.swift */,
 				E970DDDB243FFB0000DB6B39 /* CounterViewController.swift */,
+				E970DDE52440099400DB6B39 /* GitSearchViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -135,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E970DDDD243FFD9400DB6B39 /* CouterViewModel.swift */,
+				E970DDE7244009A900DB6B39 /* GitSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -160,8 +176,26 @@
 			children = (
 				E970DDD0243FF3F700DB6B39 /* Common.swift */,
 				E970DDD9243FFA6800DB6B39 /* Resource.swift */,
+				E970DDEB24400AC500DB6B39 /* Log.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		E970DDDF244008D500DB6B39 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E970DDE0244008DE00DB6B39 /* APIProvider.swift */,
+				E970DDE924400A0F00DB6B39 /* GitService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E970DDE22440091E00DB6B39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E970DDE32440092800DB6B39 /* GitRepoModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,10 +317,16 @@
 				E970DDDA243FFA6800DB6B39 /* Resource.swift in Sources */,
 				E970DDDE243FFD9400DB6B39 /* CouterViewModel.swift in Sources */,
 				E970DDD8243FFA0000DB6B39 /* MenuListViewController.swift in Sources */,
+				E970DDE62440099400DB6B39 /* GitSearchViewController.swift in Sources */,
+				E970DDE8244009A900DB6B39 /* GitSearchViewModel.swift in Sources */,
+				E970DDEC24400AC500DB6B39 /* Log.swift in Sources */,
+				E970DDEA24400A0F00DB6B39 /* GitService.swift in Sources */,
 				E970DDC7243FF31100DB6B39 /* Router.swift in Sources */,
 				E970DDB0243FF11D00DB6B39 /* AppDelegate.swift in Sources */,
 				E970DDC9243FF34200DB6B39 /* SplashViewController.swift in Sources */,
 				E970DDCC243FF37300DB6B39 /* BaseViewController.swift in Sources */,
+				E970DDE42440092800DB6B39 /* GitRepoModel.swift in Sources */,
+				E970DDE1244008DE00DB6B39 /* APIProvider.swift in Sources */,
 				E970DDDC243FFB0000DB6B39 /* CounterViewController.swift in Sources */,
 				E970DDD1243FF3F700DB6B39 /* Common.swift in Sources */,
 			);
