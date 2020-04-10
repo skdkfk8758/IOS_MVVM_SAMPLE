@@ -124,10 +124,10 @@ class Common {
         
         if(id.count <= 0) { return (false, "아이디를 입력해 주세요") }
         if(id.count < 5) { return (false, "아이디는 5자 이상 입력해 주세요") }
-        if(id.count > 20) { return (false, "아이디는 20자 까지만 입력이 가능합니다") }
-        if(!self.checkString(text: id, pattern: "[a-z0-9_-]")) {
-            return (false, "아이디는 영문 소문자와 숫자, '_', '-' 특수기호만 입력이 가능합니다")
-        }
+//        if(id.count > 20) { return (false, "아이디는 20자 까지만 입력이 가능합니다") }
+//        if(!self.checkString(text: id, pattern: "[a-z0-9_-]")) {
+//            return (false, "아이디는 영문 소문자와 숫자, '_', '-' 특수기호만 입력이 가능합니다")
+//        }
         
         return (true, "")
     }
@@ -139,27 +139,27 @@ class Common {
         
         if(password.count <= 0) { return (false, "비밀번호를 입력해 주세요") }
         if(password.count < 8) { return (false, "비밀번호는 8자 이상 입력해 주세요") }
-        if(password.count >= 8 && password.count < 10) {
-            if(self.checkString(text: password, pattern: "[A-Z]")) { validateCount = validateCount + 1}
-            if(self.checkString(text: password, pattern: "[a-z]")) { validateCount = validateCount + 1}
-            if(self.checkString(text: password, pattern: "[0-9]")) { validateCount = validateCount + 1}
-            if(self.checkString(text: password, pattern: "[`~!@#$%^&*()\\-_=+\\[{\\]}\\\\|;:'\",<.>/?]")) { validateCount = validateCount + 1}
-            
-            if validateCount >= 3 { return (true, "") }
-            else { return (false, "비밀번호는 영문 대,소문자, 숫자, 특수문자를 3가지이상 조합해서 사용해야 합니다") }
-        }
+//        if(password.count >= 8 && password.count < 10) {
+//            if(self.checkString(text: password, pattern: "[A-Z]")) { validateCount = validateCount + 1}
+//            if(self.checkString(text: password, pattern: "[a-z]")) { validateCount = validateCount + 1}
+//            if(self.checkString(text: password, pattern: "[0-9]")) { validateCount = validateCount + 1}
+//            if(self.checkString(text: password, pattern: "[`~!@#$%^&*()\\-_=+\\[{\\]}\\\\|;:'\",<.>/?]")) { validateCount = validateCount + 1}
+//
+//            if validateCount >= 3 { return (true, "") }
+//            else { return (false, "비밀번호는 영문 대,소문자, 숫자, 특수문자를 3가지이상 조합해서 사용해야 합니다") }
+//        }
+//
+//        if(password.count >= 10) {
+//            if(self.checkString(text: password, pattern: "[A-Z]")) { validateCount = validateCount + 1 }
+//            if(self.checkString(text: password, pattern: "[a-z]")) { validateCount = validateCount + 1 }
+//            if(self.checkString(text: password, pattern: "[0-9]")) { validateCount = validateCount + 1 }
+//            if(self.checkString(text: password, pattern: "[`~!@#$%^&*()\\-_=+\\[{\\]}\\\\|;:'\",<.>/?]")) { validateCount = validateCount + 1 }
+//
+//            if validateCount >= 2 { return (true, "") }
+//            else { return (false, "비밀번호는 영문 대,소문자, 숫자, 특수문자를 2가지이상 조합해서 사용해야 합니다") }
+//        }
         
-        if(password.count >= 10) {
-            if(self.checkString(text: password, pattern: "[A-Z]")) { validateCount = validateCount + 1 }
-            if(self.checkString(text: password, pattern: "[a-z]")) { validateCount = validateCount + 1 }
-            if(self.checkString(text: password, pattern: "[0-9]")) { validateCount = validateCount + 1 }
-            if(self.checkString(text: password, pattern: "[`~!@#$%^&*()\\-_=+\\[{\\]}\\\\|;:'\",<.>/?]")) { validateCount = validateCount + 1 }
-            
-            if validateCount >= 2 { return (true, "") }
-            else { return (false, "비밀번호는 영문 대,소문자, 숫자, 특수문자를 2가지이상 조합해서 사용해야 합니다") }
-        }
-        
-        return (false, "비밀번호를 입력해 주세요")
+        return (true, "")
     }
     
     // 정규식 확인기능
